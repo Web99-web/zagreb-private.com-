@@ -15,45 +15,47 @@
   <meta property="og:locale" content="hr_HR" />
 
   <style>
-    :root{--ink:#0b1220;--brand:#0ea5e9;--brand2:#22d3ee;--card:rgba(255,255,255,.82);--stroke:rgba(255,255,255,.65);--shadow:0 10px 40px rgba(2,8,23,.18)}
+    :root{--ink:#0a1220;--brand:#0ea5e9;--brand2:#22d3ee;--veil:rgba(0,0,0,.28);--stroke:rgba(255,255,255,.55);--shadow:0 10px 40px rgba(2,8,23,.18)}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--ink)}
     a{color:#0369a1;text-decoration:none}a:hover{text-decoration:underline}
 
     /* UNDER SLIKU: full-page background image */
-    body::before{content:"";position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1543342386-1d4b5f2a9e41?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;filter:brightness(0.9) saturate(1.05);z-index:-2}
+    body::before{content:"";position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1543342386-1d4b5f2a9e41?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;filter:brightness(0.72) saturate(1.1);z-index:-2}
     /* soft white veil for čitljivost */
-    body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,.45));z-index:-1}
+    body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,var(--veil),var(--veil));z-index:-1}
 
     .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-    header{padding:32px 0 18px}
+    header{padding:26px 0 6px}
 
     .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{font-weight:900;font-size:28px;letter-spacing:-.2px}
+    @media (min-width:900px){.brand{font-size:34px}}
     .langs a{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid var(--stroke);font-weight:700;margin-left:8px}
     .langs a.active{background:#0ea5e9;color:white;border-color:#0ea5e9}
 
-    .hero{margin:26px 0}
-    .headline{font-size:clamp(34px,5.6vw,64px);line-height:1.04;margin:6px 0 10px;font-weight:900;letter-spacing:-.5px}
-    .sub{font-size:clamp(16px,2vw,20px);max-width:900px}
+    .hero{margin:14px 0 8px}
+    .headline{font-size:clamp(42px,7vw,72px);line-height:1.02;margin:6px 0 8px;font-weight:900;letter-spacing:-.6px}
+    .sub{font-size:clamp(16px,2vw,20px);max-width:1000px}
 
-    .sale-cta{margin:18px 0 8px;display:flex;flex-wrap:wrap;gap:10px}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:#0ea5e9;color:white;font-weight:800;text-transform:uppercase;letter-spacing:.4px;border:1px solid rgba(255,255,255,.6);box-shadow:var(--shadow)}
+    .sale-cta{margin:16px 0 10px;display:flex;flex-wrap:wrap;gap:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:14px 18px;border-radius:999px;background:#0ea5e9;color:white;font-weight:800;text-transform:uppercase;letter-spacing:.4px;border:1px solid rgba(255,255,255,.6);box-shadow:var(--shadow)}
     .pill.alt{background:#22d3ee}
-    .contact{display:inline-flex;align-items:center;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.92);border:1px solid var(--stroke);font-weight:800}
+    .contact{display:inline-flex;align-items:center;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.95);border:1px solid var(--stroke);font-weight:900}
 
-    /* BIG WINDOWS */
-    .grid{display:grid;grid-template-columns:1fr;gap:22px;margin:24px 0 44px}
-    @media (min-width:900px){.grid{grid-template-columns:1.2fr .8fr}}
+    /* GALLERY GRID — potpuno simetrično, s fotografijama */
+    .gallery{margin:26px 0 36px}
+    .tiles{display:grid;grid-template-columns:1fr;gap:18px}
+    @media (min-width:720px){.tiles{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1024px){.tiles{grid-template-columns:repeat(4,1fr)}}
 
-    .panel{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--stroke);border-radius:22px;box-shadow:var(--shadow);padding:26px}
-    .panel h3{margin:0 0 10px;font-size:22px}
-    .kicker{font-size:13px;opacity:.8;margin-bottom:8px}
+    .tile{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.7)}
+    .tile img{display:block;width:100%;height:220px;object-fit:cover}
+    @media (min-width:900px){.tile img{height:240px}}
+    .tile h4{margin:0;padding:14px 16px 16px;font-size:18px}
 
-    .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:12px}
-    @media (min-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}
-    .card{background:rgba(255,255,255,.9);border:1px solid var(--stroke);padding:18px;border-radius:18px;box-shadow:var(--shadow)}
-    .card h4{margin:0 0 6px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .sale-banner{margin:10px 0 40px;padding:20px;border:2px dashed #7dd3fc;background:rgba(236,254,255,.9);border-radius:18px;box-shadow:var(--shadow)}
+    .sale-banner h3{margin:0 0 6px}
 
     footer{padding:26px 0;color:#0b1220}
     .tiny{font-size:12px;opacity:.7}
@@ -66,7 +68,7 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div style="font-weight:800">Zagreb Private</div>
+      <div class="brand">Zagreb Private</div>
       <nav class="langs" aria-label="Language switcher">
         <a href="#" id="btn-hr" class="active">HR</a>
         <a href="#" id="btn-en">EN</a>
@@ -82,31 +84,26 @@
         <span class="pill alt">Najam</span>
         <span class="pill">Prodaja</span>
         <a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Upit">Kontakt: zagrebrental2000@gmail.com</a>
+        <a class="contact" href="https://wa.me/385977620385?text=Pozdrav!%20Javljam%20se%20u%20vezi%20domene%20Zagreb%20Private." target="_blank">WhatsApp</a>
       </div>
 
-      <div class="grid">
-        <div class="panel">
-          <div class="kicker">Što možete graditi na domeni</div>
-          <h3>Privatni smještaj, ture i VIP usluge</h3>
-          <div class="cards">
-            <div class="card"><h4>Privatni smještaj</h4><p>Apartmani, sobe i ville — direktan kontakt, bez provizija platformi.</p></div>
-            <div class="card"><h4>Privatne ture</h4><p>Walking tour Zagreb, izleti (Plitvice, Samobor), vina & craft pivo.</p></div>
-            <div class="card"><h4>Privatni vozač</h4><p>Transferi zračna luka, poslovni gosti, VIP doček.</p></div>
-            <div class="card"><h4>Treneri & poduke</h4><p>Fitness, yoga, pilates, tenis/squash; jezici i poslovne poduke.</p></div>
-          </div>
-          <div class="cta-row">
-            <a class="contact" href="#sale">Zatraži ponudu</a>
-            <a class="contact" href="https://wa.me/385977620385?text=Pozdrav!%20Javljam%20se%20u%20vezi%20domene%20Zagreb%20Private." target="_blank">WhatsApp</a>
-          </div>
+      <div class="gallery">
+        <div class="tiles">
+          <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Privatni apartman"><h4>Privatni apartman</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Privatna kuća s bazenom"><h4>Privatna kuća s bazenom</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Privatni bus/van — razgled"><h4>Privatni bus / van — razgled</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Privatni sat joge"><h4>Privatni sat joge</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Privatni tenis"><h4>Privatni tenis</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Privatna matematika"><h4>Privatna matematika</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="Privatni vrt za najam"><h4>Privatni vrt za najam</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1200&auto=format&fit=crop" alt="Degustacije & vino"><h4>Degustacije & vino</h4></div>
         </div>
-        <aside class="panel">
-          <div class="kicker">SEO fraze (HR)</div>
-          <p><strong>privatni smještaj Zagreb</strong>, <strong>privatne ture Zagreb</strong>, <strong>privatni vozač Zagreb</strong>, VIP usluge Zagreb</p>
-          <div id="sale" style="margin-top:14px"></div>
-          <h3>Ova domena je dostupna</h3>
-          <p>Možemo dogovoriti <strong>suradnju</strong>, <strong>mjesečni najam</strong> ili <strong>jednokratnu prodaju</strong>. Javite se i pošaljite ponudu.</p>
-          <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Ponuda%20za%20Zagreb%20Private">Pošalji ponudu e‑mailom</a></p>
-        </aside>
+      </div>
+
+      <div class="sale-banner" id="sale">
+        <h3>Ova premium domena je dostupna: suradnja • najam • prodaja</h3>
+        <p>Idealno za agencije, apartmane, vodiče, vozače, trenere i concierge. Pošaljite prijedlog modela ili cijene.</p>
+        <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Ponuda%20za%20Zagreb%20Private">Pošalji ponudu e‑mailom</a></p>
       </div>
     </section>
 
@@ -119,31 +116,26 @@
         <span class="pill alt">Lease</span>
         <span class="pill">Sale</span>
         <a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Inquiry">Contact: zagrebrental2000@gmail.com</a>
+        <a class="contact" href="https://wa.me/385977620385?text=Hello!%20I'm%20contacting%20about%20the%20Zagreb%20Private%20domain." target="_blank">WhatsApp</a>
       </div>
 
-      <div class="grid">
-        <div class="panel">
-          <div class="kicker">What you can build</div>
-          <h3>Private stays, tours & VIP services</h3>
-          <div class="cards">
-            <div class="card"><h4>Private accommodation</h4><p>Apartments, rooms, villas — direct contact, no platform fees.</p></div>
-            <div class="card"><h4>Private tours</h4><p>Zagreb city walks, day trips (Plitvice, Samobor), wine & craft beer.</p></div>
-            <div class="card"><h4>Chauffeur / transfers</h4><p>Airport & business guests, VIP meet & greet.</p></div>
-            <div class="card"><h4>Trainers & lessons</h4><p>Fitness, yoga, pilates, tennis/squash; language & business lessons.</p></div>
-          </div>
-          <div class="cta-row">
-            <a class="contact" href="#sale-en">Request an offer</a>
-            <a class="contact" href="https://wa.me/385977620385?text=Hello!%20I'm%20contacting%20about%20the%20Zagreb%20Private%20domain." target="_blank">WhatsApp</a>
-          </div>
+      <div class="gallery">
+        <div class="tiles">
+          <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Private apartment"><h4>Private apartment</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Villa with pool"><h4>Villa with pool</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Private van / city tour"><h4>Private van / city tour</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Private yoga session"><h4>Private yoga session</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Private tennis"><h4>Private tennis</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Private math tutoring"><h4>Math tutoring</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="Private garden rental"><h4>Private garden rental</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1200&auto=format&fit=crop" alt="Wine tasting"><h4>Wine tasting</h4></div>
         </div>
-        <aside class="panel">
-          <div class="kicker">SEO queries (EN)</div>
-          <p><strong>private accommodation Zagreb</strong>, <strong>private tours Zagreb</strong>, <strong>private driver Zagreb</strong>, Zagreb VIP services</p>
-          <div id="sale-en" style="margin-top:14px"></div>
-          <h3>This domain is available</h3>
-          <p>Open to <strong>collaboration</strong>, <strong>monthly lease</strong> or <strong>outright sale</strong>. Email your offer.</p>
-          <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Offer%20for%20Zagreb%20Private">Send an email offer</a></p>
-        </aside>
+      </div>
+
+      <div class="sale-banner" id="sale-en">
+        <h3>This premium domain is available: collaboration • lease • sale</h3>
+        <p>Ideal for agencies, apartments, guides, drivers, trainers and concierge. Send your proposal or offer.</p>
+        <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Offer%20for%20Zagreb%20Private">Send email offer</a></p>
       </div>
     </section>
 
@@ -171,3 +163,4 @@
   </script>
 </body>
 </html>
+

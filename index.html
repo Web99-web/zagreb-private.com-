@@ -21,13 +21,13 @@
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=1600&auto=format&fit=crop" />
 
   <style>
-    :root{--bg:#0b1020;--ink:#0f172a;--brand:#0ea5e9;--brand2:#22d3ee;--muted:#64748b;--card:#ffffff;--wash:#f8fafc}
+    :root{--bg:#0a0a0a;--ink:#0e1525;--brand:#2563eb;--brand2:#60a5fa;--muted:#64748b;--card:#ffffff;--wash:#f7f8fb}
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);}
     a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
     .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    .hero{position:relative;isolation:isolate;background:linear-gradient(120deg,rgba(14,165,233,.25),rgba(34,211,238,.15)),url('https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;height:64vh;min-height:420px;color:white;display:flex;align-items:center}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.55));z-index:0}
+    .hero{position:relative;isolation:isolate;background:linear-gradient(120deg,rgba(37,99,235,.18),rgba(96,165,250,.10)),url('https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;height:64vh;min-height:420px;color:white;display:flex;align-items:center}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.28));z-index:0}
     .hero .inner{position:relative;z-index:1}
     .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px);color:#fff;padding:8px 12px;border-radius:999px;font-size:14px}
     .title{font-size:clamp(32px,5vw,56px);line-height:1.04;margin:14px 0 10px;font-weight:800}
@@ -35,9 +35,9 @@
     .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0b1020;border-radius:12px;padding:12px 18px;font-weight:700;border:2px solid transparent}
     .btn:hover{border-color:#e2e8f0}
-    .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+    .btn.alt{background:rgba(255,255,255,.85);color:#0e1525;border-color:#e2e8f0}
 
-    .for-sale{position:absolute;top:18px;right:-60px;transform:rotate(45deg);background:linear-gradient(90deg,var(--brand),var(--brand2));color:#001826;padding:10px 90px;font-weight:800;letter-spacing:.4px;box-shadow:0 6px 30px rgba(2,132,199,.35)}
+    .for-sale{position:absolute;top:18px;right:-60px;transform:rotate(45deg);background:rgba(255,255,255,.92);color:#0f172a;padding:10px 90px;font-weight:800;letter-spacing:.4px;border:1px solid #e2e8f0;box-shadow:0 6px 30px rgba(2,8,23,.15)}
 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
     .section{padding:54px 0;background:var(--wash)}
@@ -58,6 +58,7 @@
     .pill{display:inline-block;background:#e2f2ff;color:#0b3b66;border:1px solid #bfdbfe;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}
 
     .tiny{font-size:12px;color:#64748b}
+  .hero::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.18);z-index:0}
   </style>
 
   <!-- JSON-LD: product/offer to signal the sale of the domain -->

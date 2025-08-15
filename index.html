@@ -1,175 +1,173 @@
 <!doctype html>
-<html lang="en">
+<html lang="hr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zagreb Private — Private Stays, Tours & VIP Services • Domain For Sale</title>
-  <meta name="description" content="Zagreb Private — premium domain and mini-site for private accommodation, tours and VIP services in Zagreb. Bilingual HR/EN SEO. Domain is for sale — contact zagrebrental2000@gmail.com." />
-  <meta name="keywords" content="Zagreb private, private accommodation Zagreb, private tours Zagreb, private driver Zagreb, privatni smještaj Zagreb, privatne ture Zagreb, luksuzni apartmani Zagreb" />
+  <title>Zagreb Private — Privatni smještaj, ture i VIP usluge • Domena za suradnju / najam / prodaju</title>
+  <meta name="description" content="Zagreb Private — premium domena i mini‑site za privatni smještaj, ture i VIP usluge u Zagrebu. Domena je dostupna za suradnju, najam ili prodaju. HR/EN." />
+  <meta name="keywords" content="Zagreb private, privatni smještaj Zagreb, privatne ture Zagreb, private tours Zagreb, private driver Zagreb, VIP usluge Zagreb" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Zagreb Private — Private Stays, Tours & VIP Services" />
-  <meta property="og:description" content="Premium domain & micro-site for private accommodation, tours and VIP services in Zagreb. Domain is for sale." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=1600&auto=format&fit=crop" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Zagreb Private — Private Stays, Tours & VIP Services" />
-  <meta name="twitter:description" content="Premium domain & micro-site for private accommodation, tours and VIP services in Zagreb. Domain is for sale." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:title" content="Zagreb Private — Premium domena (suradnja / najam / prodaja)" />
+  <meta property="og:description" content="Privatni smještaj, ture i VIP usluge u Zagrebu. Domena je dostupna za suradnju, najam ili prodaju." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1543342386-1d4b5f2a9e41?q=80&w=2000&auto=format&fit=crop" />
+  <meta property="og:locale" content="hr_HR" />
 
   <style>
-    :root{--bg:#0a0a0a;--ink:#0e1525;--brand:#2563eb;--brand2:#60a5fa;--muted:#64748b;--card:#ffffff;--wash:#f7f8fb}
+    :root{--ink:#0b1220;--brand:#0ea5e9;--brand2:#22d3ee;--card:rgba(255,255,255,.82);--stroke:rgba(255,255,255,.65);--shadow:0 10px 40px rgba(2,8,23,.18)}
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    .hero{position:relative;isolation:isolate;background:linear-gradient(120deg,rgba(37,99,235,.18),rgba(96,165,250,.10)),url('https://images.unsplash.com/photo-1583573636250-47e98b2a9b7e?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;height:64vh;min-height:420px;color:white;display:flex;align-items:center}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.28));z-index:0}
-    .hero .inner{position:relative;z-index:1}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px);color:#fff;padding:8px 12px;border-radius:999px;font-size:14px}
-    .title{font-size:clamp(32px,5vw,56px);line-height:1.04;margin:14px 0 10px;font-weight:800}
-    .subtitle{font-size:clamp(16px,2.2vw,20px);opacity:.95;max-width:800px}
-    .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0b1020;border-radius:12px;padding:12px 18px;font-weight:700;border:2px solid transparent}
-    .btn:hover{border-color:#e2e8f0}
-    .btn.alt{background:rgba(255,255,255,.85);color:#0e1525;border-color:#e2e8f0}
+    html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--ink)}
+    a{color:#0369a1;text-decoration:none}a:hover{text-decoration:underline}
 
-    .for-sale{position:absolute;top:18px;right:-60px;transform:rotate(45deg);background:rgba(255,255,255,.92);color:#0f172a;padding:10px 90px;font-weight:800;letter-spacing:.4px;border:1px solid #e2e8f0;box-shadow:0 6px 30px rgba(2,8,23,.15)}
+    /* UNDER SLIKU: full-page background image */
+    body::before{content:"";position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1543342386-1d4b5f2a9e41?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;filter:brightness(0.9) saturate(1.05);z-index:-2}
+    /* soft white veil for čitljivost */
+    body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,.45));z-index:-1}
 
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .section{padding:54px 0;background:var(--wash)}
-    .cards{grid-column:1/-1}
-    .card{grid-column:span 6;background:var(--card);border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 6px 24px rgba(2,8,23,.05)}
-    @media (min-width:900px){.card{grid-column:span 3}}
-    .card h3{margin:4px 0 8px;font-size:18px}
-    .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.5}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+    header{padding:32px 0 18px}
 
-    .sale-banner{margin:40px 0;padding:22px;border:2px dashed #bae6fd;background:#ecfeff;border-radius:16px}
-    .sale-banner h3{margin:0 0 6px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .langs a{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid var(--stroke);font-weight:700;margin-left:8px}
+    .langs a.active{background:#0ea5e9;color:white;border-color:#0ea5e9}
 
-    .split{grid-column:1/-1;display:grid;grid-template-columns:1fr;gap:24px}
-    @media (min-width:900px){.split{grid-template-columns:1.2fr .8fr}}
+    .hero{margin:26px 0}
+    .headline{font-size:clamp(34px,5.6vw,64px);line-height:1.04;margin:6px 0 10px;font-weight:900;letter-spacing:-.5px}
+    .sub{font-size:clamp(16px,2vw,20px);max-width:900px}
 
-    .footer{padding:26px 0;color:#334155;font-size:14px}
-    .kicker{font-size:13px;color:#64748b;margin-top:6px}
-    .pill{display:inline-block;background:#e2f2ff;color:#0b3b66;border:1px solid #bfdbfe;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700}
+    .sale-cta{margin:18px 0 8px;display:flex;flex-wrap:wrap;gap:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:#0ea5e9;color:white;font-weight:800;text-transform:uppercase;letter-spacing:.4px;border:1px solid rgba(255,255,255,.6);box-shadow:var(--shadow)}
+    .pill.alt{background:#22d3ee}
+    .contact{display:inline-flex;align-items:center;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.92);border:1px solid var(--stroke);font-weight:800}
 
-    .tiny{font-size:12px;color:#64748b}
-  .hero::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.18);z-index:0}
+    /* BIG WINDOWS */
+    .grid{display:grid;grid-template-columns:1fr;gap:22px;margin:24px 0 44px}
+    @media (min-width:900px){.grid{grid-template-columns:1.2fr .8fr}}
+
+    .panel{background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--stroke);border-radius:22px;box-shadow:var(--shadow);padding:26px}
+    .panel h3{margin:0 0 10px;font-size:22px}
+    .kicker{font-size:13px;opacity:.8;margin-bottom:8px}
+
+    .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:12px}
+    @media (min-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}
+    .card{background:rgba(255,255,255,.9);border:1px solid var(--stroke);padding:18px;border-radius:18px;box-shadow:var(--shadow)}
+    .card h4{margin:0 0 6px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+
+    footer{padding:26px 0;color:#0b1220}
+    .tiny{font-size:12px;opacity:.7}
+
+    /* LANG blocks */
+    [data-lang]{display:none}
+    [data-lang="hr"].show,[data-lang="en"].show{display:block}
   </style>
-
-  <!-- JSON-LD: product/offer to signal the sale of the domain -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Zagreb Private — premium domain",
-    "category":"Domain Name",
-    "description":"Premium domain suitable for private accommodation, tours and VIP services in Zagreb. Bilingual HR/EN SEO-ready.",
-    "brand":"Zagreb Private",
-    "offers":{
-      "@type":"Offer",
-      "priceCurrency":"EUR",
-      "availability":"https://schema.org/InStock",
-      "url":"https://{your-domain-here}/",
-      "seller":{"@type":"Person","name":"Owner"}
-    }
-  }
-  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap inner">
-      <div class="badge">Zagreb • Private stays, tours & VIP services</div>
-      <h1 class="title">Zagreb Private</h1>
-      <p class="subtitle">Private accommodation, bespoke tours, drivers, trainers & curated experiences in Zagreb. <strong>Premium domain is for sale</strong> — perfect for agencies, guides, luxury apartments and concierge services.</p>
-      <div class="cta">
-        <a class="btn" href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Domain%20Inquiry">Contact: zagrebrental2000@gmail.com</a>
-        <a class="btn alt" href="#for-sale">Domain for sale →</a>
-      </div>
+  <div class="wrap">
+    <div class="topbar">
+      <div style="font-weight:800">Zagreb Private</div>
+      <nav class="langs" aria-label="Language switcher">
+        <a href="#" id="btn-hr" class="active">HR</a>
+        <a href="#" id="btn-en">EN</a>
+      </nav>
     </div>
-    <div class="for-sale" aria-label="Domain for sale">FOR SALE</div>
-  </header>
 
-  <main>
-    <section class="section">
-      <div class="wrap grid">
-        <div class="cards grid">
-          <article class="card">
-            <div class="pill">Accommodation</div>
-            <h3>Private Stays</h3>
-            <p>Handpicked apartments, rooms & villas with direct contact — ideal for VIP & business travelers.</p>
-          </article>
-          <article class="card">
-            <div class="pill">Experiences</div>
-            <h3>Private Tours</h3>
-            <p>Personal guides, Zagreb city walks, day trips (Plitvice, Samobor), wine & craft beer tastings.</p>
-          </article>
-          <article class="card">
-            <div class="pill">Lifestyle</div>
-            <h3>Private Trainers</h3>
-            <p>Fitness, yoga, pilates, tennis & squash — one‑to‑one sessions at home or in-studio.</p>
-          </article>
-          <article class="card">
-            <div class="pill">Events</div>
-            <h3>Private Events</h3>
-            <p>Small celebrations, VIP transfers & concierge for business guests and embassies.</p>
-          </article>
-        </div>
+    <!-- HR SECTION -->
+    <section class="hero" data-lang="hr" class="show">
+      <h1 class="headline">Premium domena — <span style="white-space:nowrap">Suradnja • Najam • Prodaja</span></h1>
+      <p class="sub">Savršena za privatni smještaj, privatne ture, vozače i concierge/VIP usluge u Zagrebu. Kratko, pamtljivo ime s jakim ključnim riječima ("Zagreb" + "private").</p>
+      <div class="sale-cta">
+        <span class="pill">Suradnja</span>
+        <span class="pill alt">Najam</span>
+        <span class="pill">Prodaja</span>
+        <a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Upit">Kontakt: zagrebrental2000@gmail.com</a>
+      </div>
 
-        <div id="for-sale" class="split">
-          <div class="sale-banner">
-            <h3>🚀 Premium domain is for sale: <em>Zagreb Private</em></h3>
-            <p>Ideal for agencies, luxury apartments, guides, chauffeurs & concierge services. Old, memorable name with strong keywords ("Zagreb" + "private").</p>
-            <p><strong>Make an offer / inquire:</strong> <a href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Offer">zagrebrental2000@gmail.com</a></p>
-            <p class="tiny">Optionally list on marketplaces (Sedo, Dan.com, Afternic) and link them here.</p>
+      <div class="grid">
+        <div class="panel">
+          <div class="kicker">Što možete graditi na domeni</div>
+          <h3>Privatni smještaj, ture i VIP usluge</h3>
+          <div class="cards">
+            <div class="card"><h4>Privatni smještaj</h4><p>Apartmani, sobe i ville — direktan kontakt, bez provizija platformi.</p></div>
+            <div class="card"><h4>Privatne ture</h4><p>Walking tour Zagreb, izleti (Plitvice, Samobor), vina & craft pivo.</p></div>
+            <div class="card"><h4>Privatni vozač</h4><p>Transferi zračna luka, poslovni gosti, VIP doček.</p></div>
+            <div class="card"><h4>Treneri & poduke</h4><p>Fitness, yoga, pilates, tenis/squash; jezici i poslovne poduke.</p></div>
           </div>
-          <aside>
-            <h4>SEO (EN + HR)</h4>
-            <p><strong>EN:</strong> private accommodation Zagreb, private tours Zagreb, private driver Zagreb, Zagreb VIP services</p>
-            <p><strong>HR:</strong> privatni smještaj Zagreb, privatne ture Zagreb, privatni vozač Zagreb, VIP usluge Zagreb</p>
-            <p class="kicker">Add 2–3 short blog blurbs later to capture long‑tail queries.</p>
-          </aside>
+          <div class="cta-row">
+            <a class="contact" href="#sale">Zatraži ponudu</a>
+            <a class="contact" href="https://wa.me/385977620385?text=Pozdrav!%20Javljam%20se%20u%20vezi%20domene%20Zagreb%20Private." target="_blank">WhatsApp</a>
+          </div>
         </div>
+        <aside class="panel">
+          <div class="kicker">SEO fraze (HR)</div>
+          <p><strong>privatni smještaj Zagreb</strong>, <strong>privatne ture Zagreb</strong>, <strong>privatni vozač Zagreb</strong>, VIP usluge Zagreb</p>
+          <div id="sale" style="margin-top:14px"></div>
+          <h3>Ova domena je dostupna</h3>
+          <p>Možemo dogovoriti <strong>suradnju</strong>, <strong>mjesečni najam</strong> ili <strong>jednokratnu prodaju</strong>. Javite se i pošaljite ponudu.</p>
+          <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Ponuda%20za%20Zagreb%20Private">Pošalji ponudu e‑mailom</a></p>
+        </aside>
       </div>
     </section>
 
-    <section class="wrap" aria-label="contact" style="padding:32px 0 8px">
-      <h3 style="margin:0 0 8px">Contact</h3>
-      <p style="margin:0 0 6px">Email: <a href="mailto:zagrebrental2000@gmail.com">zagrebrental2000@gmail.com</a></p>
-      <p class="tiny">Prefer WhatsApp? Add your link here later (e.g. wa.me/+385...)</p>
-    </section>
-  </main>
+    <!-- EN SECTION -->
+    <section class="hero" data-lang="en">
+      <h1 class="headline">Premium domain — <span style="white-space:nowrap">Collaboration • Lease • Sale</span></h1>
+      <p class="sub">Perfect for private accommodation, bespoke tours, chauffeurs and VIP/concierge services in Zagreb. Short, memorable, keyword‑rich ("Zagreb" + "private").</p>
+      <div class="sale-cta">
+        <span class="pill">Collaboration</span>
+        <span class="pill alt">Lease</span>
+        <span class="pill">Sale</span>
+        <a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Zagreb%20Private%20—%20Inquiry">Contact: zagrebrental2000@gmail.com</a>
+      </div>
 
-  <footer class="footer">
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-      <div>© <span id="year"></span> Zagreb Private • All rights reserved</div>
-      <div class="tiny">Visitors: <span id="pv">10,000</span> <span class="tiny">(local counter)</span></div>
-    </div>
-  </footer>
+      <div class="grid">
+        <div class="panel">
+          <div class="kicker">What you can build</div>
+          <h3>Private stays, tours & VIP services</h3>
+          <div class="cards">
+            <div class="card"><h4>Private accommodation</h4><p>Apartments, rooms, villas — direct contact, no platform fees.</p></div>
+            <div class="card"><h4>Private tours</h4><p>Zagreb city walks, day trips (Plitvice, Samobor), wine & craft beer.</p></div>
+            <div class="card"><h4>Chauffeur / transfers</h4><p>Airport & business guests, VIP meet & greet.</p></div>
+            <div class="card"><h4>Trainers & lessons</h4><p>Fitness, yoga, pilates, tennis/squash; language & business lessons.</p></div>
+          </div>
+          <div class="cta-row">
+            <a class="contact" href="#sale-en">Request an offer</a>
+            <a class="contact" href="https://wa.me/385977620385?text=Hello!%20I'm%20contacting%20about%20the%20Zagreb%20Private%20domain." target="_blank">WhatsApp</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <div class="kicker">SEO queries (EN)</div>
+          <p><strong>private accommodation Zagreb</strong>, <strong>private tours Zagreb</strong>, <strong>private driver Zagreb</strong>, Zagreb VIP services</p>
+          <div id="sale-en" style="margin-top:14px"></div>
+          <h3>This domain is available</h3>
+          <p>Open to <strong>collaboration</strong>, <strong>monthly lease</strong> or <strong>outright sale</strong>. Email your offer.</p>
+          <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Offer%20for%20Zagreb%20Private">Send an email offer</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="topbar" style="padding-top:6px">
+        <div>© <span id="year"></span> Zagreb Private</div>
+        <div class="tiny">Visitors: <span id="pv">10,000</span></div>
+      </div>
+    </footer>
+  </div>
 
   <script>
-    // Year
+    // Year & local counter
     document.getElementById('year').textContent = new Date().getFullYear();
+    try{const k='zp_visits_v1',b=10000;let n=parseInt(localStorage.getItem(k)||'0',10);n=isNaN(n)?0:n+1;localStorage.setItem(k,String(n));document.getElementById('pv').textContent=(b+n).toLocaleString();}catch(e){}
 
-    // Lightweight local counter (per-device) starting from 10,000
-    try {
-      const key = 'zp_visits_v1';
-      const base = 10000;
-      let n = parseInt(localStorage.getItem(key) || '0', 10);
-      n = isNaN(n) ? 0 : n + 1;
-      localStorage.setItem(key, String(n));
-      document.getElementById('pv').textContent = (base + n).toLocaleString();
-    } catch (e) {
-      /* ignore */
-    }
+    // language toggle
+    const sections={hr:document.querySelector('section[data-lang="hr"]'),en:document.querySelector('section[data-lang="en"]')};
+    const btnHR=document.getElementById('btn-hr');
+    const btnEN=document.getElementById('btn-en');
+    function show(lang){sections.hr.classList.toggle('show',lang==='hr');sections.en.classList.toggle('show',lang==='en');btnHR.classList.toggle('active',lang==='hr');btnEN.classList.toggle('active',lang==='en');document.documentElement.lang=lang}
+    btnHR.addEventListener('click',e=>{e.preventDefault();show('hr')});
+    btnEN.addEventListener('click',e=>{e.preventDefault();show('en')});
+    show('hr');
   </script>
-
-  <!-- Optional: paste Cloudflare Web Analytics here for global analytics
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_TOKEN_HERE"}'></script>
-  -->
 </body>
 </html>

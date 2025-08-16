@@ -68,6 +68,13 @@
     /* LANG blocks */
     [data-lang]{display:none}
     [data-lang="hr"].show,[data-lang="en"].show{display:block}
+  .trainers{margin:0 0 40px}
+    .trainer-list{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:720px){.trainer-list{grid-template-columns:repeat(2,1fr)}}
+    .trainer-card{background:rgba(255,255,255,.95);border:1px solid var(--stroke);border-radius:18px;box-shadow:var(--shadow);padding:18px}
+    .trainer-card h4{margin:0 0 6px}
+    .trainer-card p{margin:0 0 10px}
+    .trainer-cta{display:flex;flex-wrap:wrap;gap:10px}
   </style>
   <script type="application/ld+json">
   {
@@ -125,24 +132,49 @@
         <div class="tiles">
           <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Privatni apartman"><h4>Privatni apartman</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Privatna kuća s bazenom"><h4>Privatna kuća s bazenom</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Privatni bus/van — razgled"><h4>Privatni bus / van — razgled</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Privatni transfer (aerodrom ZAG)"><h4>Privatni transfer (aerodrom ZAG)</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Privatni sat joge"><h4>Privatni sat joge</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni tenis"><h4>Privatni tenis</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Privatna matematika"><h4>Privatna matematika</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="Privatni vrt za najam"><h4>Privatni vrt za najam</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1200&auto=format&fit=crop" alt="Degustacije & vino"><h4>Degustacije & vino</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop" alt="Privatni fotograf"><h4>Privatni fotograf</h4></div>
+          <div class="tile"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni vozač (po satu)"><h4>Privatni vozač (po satu)</h4></div>
         <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Privatne bike ture"><h4>Privatne bike ture</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni squash"><h4>Privatni squash</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/2188012/pexels-photo-2188012.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatna škola plesa"><h4>Privatna škola plesa</h4></div>
         <div class="tile"><img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni kuhar"><h4>Privatni kuhar</h4></div>
         </div>
       </div>
-
-      <div class="sale-banner" id="sale">
-        <h3>Ova premium domena je dostupna: suradnja • najam • prodaja</h3>
-        <p>Idealno za agencije, apartmane, vodiče, vozače, trenere i concierge. Pošaljite prijedlog modela ili cijene.</p>
-        <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Ponuda%20za%20Zagreb%20Private">Pošalji ponudu e‑mailom</a></p>
+      <div class="trainers">
+        <h3>Istaknuti treneri (beta)</h3>
+        <div class="trainer-list">
+          <div class="trainer-card">
+            <h4>Davor — Privatni squash trener</h4>
+            <p>Kontakt: <a href="tel:+385922446417">092 244 6417</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zpsq-davor-call">Nazovi</a>
+              <a class="contact" href="?out=zpsq-davor-wa">WhatsApp</a>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <h4>Davor — Privatni tenis trener</h4>
+            <p>Kontakt: <a href="tel:+385981679993">098 167 9993</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zten-davor-call">Nazovi</a>
+              <a class="contact" href="?out=zten-davor-wa">WhatsApp</a>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <h4>Goran — Privatni yoga trener</h4>
+            <p>Kontakt: <a href="tel:+38598233497">098 233 497</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zyog-goran-call">Nazovi</a>
+              <a class="contact" href="?out=zyog-goran-wa">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <p class="tiny">Napomena: klikovi “Nazovi/WhatsApp” prolaze kroz Zagreb Private radi statistike leadova.</p>
       </div>
+
     </section>
 
     <!-- EN SECTION -->
@@ -161,24 +193,49 @@
         <div class="tiles">
           <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Private apartment"><h4>Private apartment</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Villa with pool"><h4>Villa with pool</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Private van / city tour"><h4>Private van / city tour</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Private airport transfer (ZAG)"><h4>Private airport transfer (ZAG)</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Private yoga session"><h4>Private yoga session</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private tennis"><h4>Private tennis</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Private math tutoring"><h4>Math tutoring</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop" alt="Private garden rental"><h4>Private garden rental</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?q=80&w=1200&auto=format&fit=crop" alt="Wine tasting"><h4>Wine tasting</h4></div>
+          <div class="tile"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop" alt="Private photographer"><h4>Private photographer</h4></div>
+          <div class="tile"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private chauffeur (hourly)"><h4>Private chauffeur (hourly)</h4></div>
         <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Private bike tours"><h4>Private bike tours</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private squash"><h4>Private squash</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/2188012/pexels-photo-2188012.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Dance school"><h4>Dance school</h4></div>
         <div class="tile"><img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private chef"><h4>Private chef</h4></div>
         </div>
       </div>
-
-      <div class="sale-banner" id="sale-en">
-        <h3>This premium domain is available: collaboration • lease • sale</h3>
-        <p>Ideal for agencies, apartments, guides, drivers, trainers and concierge. Send your proposal or offer.</p>
-        <p><a class="contact" href="mailto:zagrebrental2000@gmail.com?subject=Offer%20for%20Zagreb%20Private">Send email offer</a></p>
+      <div class="trainers">
+        <h3>Featured trainers (beta)</h3>
+        <div class="trainer-list">
+          <div class="trainer-card">
+            <h4>Davor — Private squash coach</h4>
+            <p>Contact: <a href="tel:+385922446417">+385 92 244 6417</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zpsq-davor-call">Call</a>
+              <a class="contact" href="?out=zpsq-davor-wa">WhatsApp</a>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <h4>Davor — Private tennis coach</h4>
+            <p>Contact: <a href="tel:+385981679993">+385 98 167 9993</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zten-davor-call">Call</a>
+              <a class="contact" href="?out=zten-davor-wa">WhatsApp</a>
+            </div>
+          </div>
+          <div class="trainer-card">
+            <h4>Goran — Private yoga coach</h4>
+            <p>Contact: <a href="tel:+38598233497">+385 98 233 497</a></p>
+            <div class="trainer-cta">
+              <a class="contact" href="?out=zyog-goran-call">Call</a>
+              <a class="contact" href="?out=zyog-goran-wa">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <p class="tiny">Note: calls and WhatsApp clicks are routed via Zagreb Private for lead tracking.</p>
       </div>
+
     </section>
 
     <footer>
@@ -190,6 +247,21 @@
   </div>
 
   <script>
+    // Outbound tracking router (?out=...)
+    (function(){
+      try{
+        var params=new URLSearchParams(location.search); var key=params.get('out');
+        if(!key) return; var map={
+          'zpsq-davor-call':'tel:+385922446417',
+          'zpsq-davor-wa':'https://wa.me/385922446417?text=Hi%2C%20via%20Zagreb%20Private%20%5BZP-SQUASH-DAVOR%5D.%20I%27d%20like%20to%20book%20a%20private%20squash%20session.%20Date%3A%20__%20Time%3A%20__%20Location%3A%20__',
+          'zten-davor-call':'tel:+385981679993',
+          'zten-davor-wa':'https://wa.me/385981679993?text=Hi%2C%20via%20Zagreb%20Private%20%5BZP-TENNIS-DAVOR%5D.%20I%27d%20like%20to%20book%20a%20private%20tennis%20session.%20Date%3A%20__%20Time%3A%20__%20Location%3A%20__',
+          'zyog-goran-call':'tel:+38598233497',
+          'zyog-goran-wa':'https://wa.me/38598233497?text=Hi%2C%20via%20Zagreb%20Private%20%5BZP-YOGA-GORAN%5D.%20I%27d%20like%20to%20book%20a%20private%20yoga%20session.%20Date%3A%20__%20Time%3A%20__%20Location%3A%20__'
+        }; if(map[key]){ setTimeout(function(){ location.href=map[key]; }, 120); }
+      }catch(e){}
+    })();
+
     // Year & local counter
     document.getElementById('year').textContent = new Date().getFullYear();
     try{const k='zp_visits_v1',b=10000;let n=parseInt(localStorage.getItem(k)||'0',10);n=isNaN(n)?0:n+1;localStorage.setItem(k,String(n));document.getElementById('pv').textContent=(b+n).toLocaleString();}catch(e){}

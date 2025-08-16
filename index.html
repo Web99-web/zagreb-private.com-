@@ -1,18 +1,23 @@
 <!doctype html>
-<html lang="hr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zagreb Private — Privatni smještaj, ture i VIP usluge • Domena za suradnju / najam / prodaju</title>
-  <meta name="description" content="Zagreb Private — premium domena i mini‑site za privatni smještaj, ture i VIP usluge u Zagrebu. Domena je dostupna za suradnju, najam ili prodaju. HR/EN." />
-  <meta name="keywords" content="Zagreb private, privatni smještaj Zagreb, privatne ture Zagreb, private tours Zagreb, private driver Zagreb, VIP usluge Zagreb" />
+  <title>Private accommodation, tours, airport transfers & VIP in Zagreb | Zagreb Private</title>
+  <meta id="meta-desc" name="description" content="Private apartments & villas, bespoke tours, airport & city transfers, chauffeurs, trainers and private lessons in Zagreb. Discreet and personalized. EN/HR. Zagreb Private." />
+  <meta name="keywords" content="private accommodation Zagreb, private tours Zagreb, private airport transfer Zagreb, chauffeur Zagreb, private guide Zagreb, personal trainer Zagreb, private lessons Zagreb, privatni smještaj Zagreb, privatne ture Zagreb, privatni transfer aerodrom Zagreb" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Zagreb Private — Premium domena (suradnja / najam / prodaja)" />
-  <meta property="og:description" content="Privatni smještaj, ture i VIP usluge u Zagrebu. Domena je dostupna za suradnju, najam ili prodaju." />
+  <meta property="og:title" id="og-title" content="Zagreb Private — Private accommodation, tours & airport transfers" />
+  <meta property="og:description" id="og-desc" content="Private stays, bespoke tours, drivers & VIP services in Zagreb. Privatni smještaj, privatne ture, transferi i VIP usluge." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1543342386-1d4b5f2a9e41?q=80&w=2000&auto=format&fit=crop" />
-  <meta property="og:locale" content="hr_HR" />
+  <meta property="og:locale" id="og-locale" content="en_US" />
+  <link rel="canonical" id="canonical" href="https://zagreb-private.com/?lang=en" />
+  <link rel="alternate" hreflang="hr" href="https://zagreb-private.com/?lang=hr" />
+  <link rel="alternate" hreflang="en" href="https://zagreb-private.com/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://zagreb-private.com/" />
+  <meta name="robots" content="index,follow" />
 
   <style>
     :root{--ink:#0a1220;--brand:#0ea5e9;--brand2:#22d3ee;--veil:rgba(0,0,0,.08);--stroke:rgba(255,255,255,.55);--shadow:0 10px 40px rgba(2,8,23,.18)}
@@ -64,14 +69,43 @@
     [data-lang]{display:none}
     [data-lang="hr"].show,[data-lang="en"].show{display:block}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zagreb Private",
+    "url": "https://zagreb-private.com/",
+    "inLanguage": ["hr", "en"],
+    "description": "Private accommodation, private tours, drivers and VIP services in Zagreb. Privatni smještaj, privatne ture, vozači i VIP usluge u Zagrebu.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://zagreb-private.com/?q={search_term}",
+      "query-input": "required name=search_term"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type":"Service","name":"Privatni apartmani i vile","areaServed":"Zagreb"},
+      {"@type":"Service","name":"Privatne ture Zagreba i izleti","areaServed":"Zagreb"},
+      {"@type":"Service","name":"Privatni transfer i vozač (aerodrom/grad)","areaServed":"Zagreb"},
+      {"@type":"Service","name":"Privatni treneri i satovi (yoga, pilates, tenis, squash)","areaServed":"Zagreb"},
+      {"@type":"Service","name":"Privatne poduke (jezici, matematika)","areaServed":"Zagreb"},
+      {"@type":"Service","name":"Privatni kuhar i degustacije","areaServed":"Zagreb"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="wrap">
     <div class="topbar">
       <div class="brand">Zagreb Private</div>
       <nav class="langs" aria-label="Language switcher">
-        <a href="#" id="btn-hr" class="active">HR</a>
-        <a href="#" id="btn-en">EN</a>
+        <a href="#" id="btn-hr">HR</a>
+        <a href="#" id="btn-en" class="active">EN</a>
       </nav>
     </div>
 
@@ -164,10 +198,33 @@
     const sections={hr:document.querySelector('section[data-lang="hr"]'),en:document.querySelector('section[data-lang="en"]')};
     const btnHR=document.getElementById('btn-hr');
     const btnEN=document.getElementById('btn-en');
-    function show(lang){sections.hr.classList.toggle('show',lang==='hr');sections.en.classList.toggle('show',lang==='en');btnHR.classList.toggle('active',lang==='hr');btnEN.classList.toggle('active',lang==='en');document.documentElement.lang=lang}
+    function show(lang){
+      sections.hr.classList.toggle('show',lang==='hr');
+      sections.en.classList.toggle('show',lang==='en');
+      btnHR.classList.toggle('active',lang==='hr');
+      btnEN.classList.toggle('active',lang==='en');
+      document.documentElement.lang=lang;
+      // Dynamic SEO title/description for HR & EN
+      const tHR='Privatni smještaj, ture, transferi (aerodrom) & VIP usluge u Zagrebu | Zagreb Private';
+      const dHR='Privatni apartmani i vile, privatne ture, privatni transferi (aerodrom/grad), vozači, treneri i privatne poduke u Zagrebu. Diskretno i personalizirano.';
+      const otHR='Zagreb Private — Privatni smještaj, ture, transferi (aerodrom) & VIP usluge';
+      const odHR='Privatni smještaj, privatne ture, transferi i VIP usluge u Zagrebu.';
+      const tEN='Private accommodation, tours, airport transfers & VIP in Zagreb | Zagreb Private';
+      const dEN='Private apartments & villas, bespoke tours, airport & city transfers, chauffeurs, trainers and private lessons in Zagreb. Discreet and personalized.';
+      const otEN='Zagreb Private — Private accommodation, tours & airport transfers';
+      const odEN='Private stays, tours, drivers & VIP services in Zagreb.';
+      document.title = (lang==='hr'?tHR:tEN);
+      document.getElementById('meta-desc')?.setAttribute('content', lang==='hr'?dHR:dEN);
+      document.getElementById('og-title')?.setAttribute('content', lang==='hr'?otHR:otEN);
+      document.getElementById('og-desc')?.setAttribute('content', lang==='hr'?odHR:odEN);
+      document.getElementById('og-locale')?.setAttribute('content', lang==='hr'?'hr_HR':'en_US');
+      const canon=document.getElementById('canonical');
+      if(canon) canon.setAttribute('href','https://zagreb-private.com/?lang='+lang);
+      if(history.replaceState){history.replaceState(null,'','?lang='+lang)}
+    }
     btnHR.addEventListener('click',e=>{e.preventDefault();show('hr')});
     btnEN.addEventListener('click',e=>{e.preventDefault();show('en')});
-    show('hr');
+    show('en');
   </script>
 </body>
 </html>

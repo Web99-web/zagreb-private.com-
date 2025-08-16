@@ -54,7 +54,7 @@
     @media (min-width:720px){.tiles{grid-template-columns:repeat(2,1fr)}}
     @media (min-width:1024px){.tiles{grid-template-columns:repeat(4,1fr)}}
 
-    .tile{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.7)}
+    .tile{position:relative;display:block;$1}
     .tile img{display:block;width:100%;height:220px;object-fit:cover}
     @media (min-width:900px){.tile img{height:240px}}
     .tile h4{margin:0;padding:14px 16px 16px;font-size:18px}
@@ -133,27 +133,18 @@
           <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Privatni apartman"><h4>Privatni apartman</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Privatna kuća s bazenom"><h4>Privatna kuća s bazenom</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Privatni transfer (aerodrom ZAG)"><h4>Privatni transfer (aerodrom ZAG)</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Privatni sat joge"><h4>Privatni sat joge</h4></div>
-          <div class="tile"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni tenis"><h4>Privatni tenis</h4></div>
+          <a class="tile" href="?out=zyog-goran-wa" aria-label="Rezerviraj privatni sat joge preko WhatsAppa"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Privatni sat joge"><h4>Privatni sat joge</h4></a>
+          <a class="tile" href="?out=zten-davor-wa" aria-label="Rezerviraj privatni tenis preko WhatsAppa"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni tenis"><h4>Privatni tenis</h4></a>
           <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Privatna matematika"><h4>Privatna matematika</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop" alt="Privatni fotograf"><h4>Privatni fotograf</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni vozač (po satu)"><h4>Privatni vozač (po satu)</h4></div>
         <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Privatne bike ture"><h4>Privatne bike ture</h4></div>
-          <div class="tile"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni squash"><h4>Privatni squash</h4></div>
+          <a class="tile" href="?out=zpsq-davor-wa" aria-label="Rezerviraj privatni squash preko WhatsAppa"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni squash"><h4>Privatni squash</h4></a>
           <div class="tile"><img src="https://images.pexels.com/photos/2188012/pexels-photo-2188012.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatna škola plesa"><h4>Privatna škola plesa</h4></div>
         <div class="tile"><img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Privatni kuhar"><h4>Privatni kuhar</h4></div>
         </div>
       </div>
-      <div class="trainers">
-        <h3>Istaknuti treneri (beta)</h3>
-        <div class="trainer-list">
-          <div class="trainer-card">
-            <h4>Davor — Privatni squash trener</h4>
-            <p>Kontakt: <a href="tel:+385922446417">092 244 6417</a></p>
-            <div class="trainer-cta">
-              <a class="contact" href="?out=zpsq-davor-call">Nazovi</a>
-              <a class="contact" href="?out=zpsq-davor-wa">WhatsApp</a>
-            </div>
+      
           </div>
           <div class="trainer-card">
             <h4>Davor — Privatni tenis trener</h4>
@@ -194,27 +185,18 @@
           <div class="tile"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Private apartment"><h4>Private apartment</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Villa with pool"><h4>Villa with pool</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1200&auto=format&fit=crop" alt="Private airport transfer (ZAG)"><h4>Private airport transfer (ZAG)</h4></div>
-          <div class="tile"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Private yoga session"><h4>Private yoga session</h4></div>
-          <div class="tile"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private tennis"><h4>Private tennis</h4></div>
+          <a class="tile" href="?out=zyog-goran-wa" aria-label="Book private yoga via WhatsApp"><img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop" alt="Private yoga session"><h4>Private yoga session</h4></a>
+          <a class="tile" href="?out=zten-davor-wa" aria-label="Book private tennis via WhatsApp"><img src="https://images.pexels.com/photos/5739200/pexels-photo-5739200.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private tennis"><h4>Private tennis</h4></a>
           <div class="tile"><img src="https://images.unsplash.com/photo-1554774853-b415df9eeb92?q=80&w=1200&auto=format&fit=crop" alt="Private math tutoring"><h4>Math tutoring</h4></div>
           <div class="tile"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop" alt="Private photographer"><h4>Private photographer</h4></div>
           <div class="tile"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private chauffeur (hourly)"><h4>Private chauffeur (hourly)</h4></div>
         <div class="tile"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200&auto=format&fit=crop" alt="Private bike tours"><h4>Private bike tours</h4></div>
-          <div class="tile"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private squash"><h4>Private squash</h4></div>
+          <a class="tile" href="?out=zpsq-davor-wa" aria-label="Book private squash via WhatsApp"><img src="https://images.pexels.com/photos/8007591/pexels-photo-8007591.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private squash"><h4>Private squash</h4></a>
           <div class="tile"><img src="https://images.pexels.com/photos/2188012/pexels-photo-2188012.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Dance school"><h4>Dance school</h4></div>
         <div class="tile"><img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=1" alt="Private chef"><h4>Private chef</h4></div>
         </div>
       </div>
-      <div class="trainers">
-        <h3>Featured trainers (beta)</h3>
-        <div class="trainer-list">
-          <div class="trainer-card">
-            <h4>Davor — Private squash coach</h4>
-            <p>Contact: <a href="tel:+385922446417">+385 92 244 6417</a></p>
-            <div class="trainer-cta">
-              <a class="contact" href="?out=zpsq-davor-call">Call</a>
-              <a class="contact" href="?out=zpsq-davor-wa">WhatsApp</a>
-            </div>
+      
           </div>
           <div class="trainer-card">
             <h4>Davor — Private tennis coach</h4>
